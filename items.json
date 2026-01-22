@@ -1,0 +1,16 @@
+{
+  "pepsi": {
+    "type": "heal",
+    "value": 20,
+    "text": "Una lata de pepsi que recupera 20 HP"
+  },
+  "caja": {
+    "type": "misc",
+    "text": "Una caja misteriosa. Podría ser buena o mala."
+  },
+    "takis": {
+    "type": "heal",
+    "value": 40,
+    "text": "una bolsa de takis mediana."
+  }
+}

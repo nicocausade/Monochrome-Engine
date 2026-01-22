@@ -1,0 +1,64 @@
+{
+  "inicio": {
+    "text": "Bienvenido al juego demo de Monochrome Engine. Estas en tu casa tranquilo hasta que recordás que tenés que ir a buscar un paquete al correo",
+    "on_enter": "lambda state: add_item(state, 'pepsi')",
+    "options": {
+      "Salir de la casa": "calle",
+      "Quedarte en casa": "fin_casa"
+    }
+  },
+
+  "calle": {
+    "text": "En el camino hacia el correo, un perro callejero te ataca.",
+    "options": {
+      "Enfrentar": "escena_perro1",
+      "Seguir caminando": "camino"
+    }
+  },
+
+  "escena_perro1": {
+     "on_enter": "lambda state: combat(state, {'name':'Perro', 'hp':30, 'atk':5})",
+     "text": "¿Qué decidís hacer",
+     "options": {
+      "Tomar pepsi": {"action": "use_item(self.state, 'pepsi')", "next": "escena_perro1.5"},
+      "Seguír caminando": "camino"
+     }
+  },
+  "escena_perro1.5": {
+    "text": "Te tomaste la pepsi, recuperás 20 HP",
+    "options": {
+      "Seguír caminando": "camino"
+    }
+  },
+  
+  "camino": {
+    "text": "Seguís caminando hasta que ves el correo",
+    "options": {
+      "entrar": "correo"
+    }
+  },
+
+  "correo": {
+    "text": "Llegaste al correo. Vés una caja misteriosa en el piso.",
+    "on_enter": "lambda state: add_item(state, 'caja')",
+    "options": {
+      "Abrir la caja": "evento_caja",
+      "Ignorar la caja": "fin_bien"
+    }
+  },
+  "evento_caja": {
+    "text": "¡Sorpresa! Era una trampa...",
+    "on_enter": "lambda state: damage(state, 5, 15, 0.8)",
+    "options": {
+      "Seguir tu camino": "fin_bien"
+    }
+  },
+  "fin_casa": {
+    "text": "Decidiste quedarte en casa, has muerto de aburrimiento.",
+    "options": {}
+  },
+  "fin_bien": {
+    "text": "Completaste el juego demo. Tenés tu paquete y conocés las capacidades de Monochrome Engine .",
+    "options": {}
+  }
+}

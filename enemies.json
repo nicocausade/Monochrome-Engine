@@ -1,0 +1,12 @@
+{
+  "perro": {
+    "hp": 30,
+    "atk": 5,
+    "text": "Un perro callejero gruñe ferozmente"
+  },
+  "chorro": {
+    "hp": 100,
+    "atk": 15,
+    "text": "Un chorro que quiere robarte"
+  }
+}
