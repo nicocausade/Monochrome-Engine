@@ -1,6 +1,8 @@
 # Monochrome-Engine
 Motor de RPG de texto estilo retro con combate, enemigos, items y escenas JSON.
 
+<img width="256" height="256" alt="pixilart-drawing" src="https://github.com/user-attachments/assets/50d27680-b767-4a60-83c7-fa7c1be50622" />
+
 Monochrome Engine es un motor de RPG de texto inspirado en los juegos retro de los 80s. 
 Permite crear historias interactivas con:
 
